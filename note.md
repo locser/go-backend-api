@@ -1,0 +1,1 @@
+- Hàm viết hoa chữ cái đầu trong go sẽ thể hiện hàm đó public, viết thường sẽ là private
