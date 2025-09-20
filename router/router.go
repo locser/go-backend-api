@@ -14,7 +14,9 @@ func InitRouter() *gin.Engine {
 	v2 := r.Group("/v2")
 	{
 		v2.GET("/ping", controller.Ping)
+		// controller user
 		v2.GET("/user/detail", userController.GetDetailUser)
+		v2.GET("/user/detail-error", userController.GetDetailUserError)
 	}
 
 	return r

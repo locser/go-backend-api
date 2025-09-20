@@ -2,7 +2,7 @@ package controller
 
 import (
 	service "go-backend/internal/service"
-	"net/http"
+	"go-backend/responses"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,7 +19,10 @@ func NewUserController() *UserController {
 
 func (uc *UserController) GetDetailUser(c *gin.Context) {
 
-	c.JSON(http.StatusOK, gin.H{
-		"message": uc.userService.GetDetailUser(),
-	})
+	responses.SuccessResponse(c, responses.StatusOK, uc.userService.GetDetailUser())
+}
+
+func (uc *UserController) GetDetailUserError(c *gin.Context) {
+
+	responses.ErrorResponse(c, responses.ErrCodeParamInvalid, "Test Error")
 }
