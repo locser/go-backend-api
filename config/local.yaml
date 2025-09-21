@@ -1,14 +1,15 @@
 server:
   port: 1222
-databases:
-  - user: root
-    password: password
-    host: localhost
-    dbName: shopDev
-  - user: root2
-    password: password2
-    host: localhost
-    dbName: shopDev2
+mysql:
+  user: root
+  password: password
+  host: localhost
+  port: 3306
+  dbName: shopDev
+  maxIdleConns: 10
+  maxOpenConns: 100
+  connMaxLifetime: 3600
+
 security:
   jwt:
     key: locser
