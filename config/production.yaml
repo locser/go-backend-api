@@ -1,0 +1,10 @@
+server:
+  port: 1222
+database: 
+  user:root
+  password: password
+  host: localhost
+  dbName: shopDev
+security:
+  jwt:
+    key: locser
