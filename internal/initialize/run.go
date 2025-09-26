@@ -9,7 +9,10 @@ func Run() {
 
 	LoadConfig()
 	fmt.Println("loading configuration mysql:", global.Config.Mysql.Host)
+
 	InitLogger()
+	global.Logger.Info("Message info from GLOBAL LOGGER INFO")
+
 	InitMysql()
 	InitRedis()
 

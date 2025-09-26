@@ -2,6 +2,7 @@ package global
 
 import (
 	"database/sql"
+	"go-backend/pkg/logger"
 	"go-backend/pkg/setting"
 
 	"github.com/redis/go-redis/v9"
@@ -10,8 +11,8 @@ import (
 )
 
 var (
-	Config setting.Config
-	// Logger        *logger.LoggerZap
+	Config        setting.Config
+	Logger        *logger.LoggerZap
 	Rdb           *redis.Client
 	Mdb           *gorm.DB
 	Mdbc          *sql.DB

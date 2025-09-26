@@ -3,7 +3,7 @@ package setting
 type Config struct {
 	Server ServerSetting `mapstructure:"server"`
 	Mysql  MySQLSetting  `mapstructure:"mysql"`
-	Logger LoggerSetting `mapstructure:"logger"`
+	Logger LoggerSetting `mapstructure:"log"`
 	Redis  RedisSetting  `mapstructure:"redis"`
 }
 

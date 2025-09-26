@@ -7,18 +7,6 @@ import (
 	"github.com/spf13/viper"
 )
 
-type Config struct {
-	Server struct {
-		Port int `mapstructure:"port"`
-	} `mapstructure:"server"`
-
-	Mysql []struct {
-		User     string `mapstructure:"user"`
-		Password string `mapstructure:"password"`
-		Host     string `mapstructure:"host"`
-	} `mapstructure:"mysql"`
-}
-
 func LoadConfig() {
 
 	//go get github.com/spf13/viper
